@@ -1,0 +1,95 @@
+---
+---
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <hr class="footer-divider" />
+    <div class="footer-content">
+      <div class="footer-brand">
+        <span class="footer-logo">EATLHO</span>
+        <span class="footer-copy">© 2026 eatlho. All rights reserved.</span>
+      </div>
+      <nav class="footer-nav" aria-label="하단 메뉴">
+        <a href="/terms/" class="footer-link">이용약관</a>
+        <a href="/privacy/" class="footer-link">개인정보처리방침</a>
+        <a href="mailto:contact@eatlho.com" class="footer-link">contact@eatlho.com</a>
+      </nav>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .site-footer {
+    margin-top: var(--padding-section);
+  }
+
+  .footer-divider {
+    margin-bottom: 32px;
+  }
+
+  .footer-inner {
+    padding-bottom: 40px;
+  }
+
+  .footer-content {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+
+  .footer-brand {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .footer-logo {
+    font-family: var(--font-mono);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-bold);
+    letter-spacing: var(--letter-spacing-wide);
+    color: var(--color-black);
+  }
+
+  .footer-copy {
+    font-family: var(--font-mono);
+    font-size: var(--font-size-xs);
+    color: var(--color-silver);
+    letter-spacing: 0.3px;
+  }
+
+  .footer-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: flex-end;
+  }
+
+  .footer-link {
+    font-family: var(--font-mono);
+    font-size: var(--font-size-xs);
+    color: var(--color-silver);
+    text-decoration: none;
+    letter-spacing: 0.3px;
+  }
+
+  .footer-link:hover {
+    color: var(--color-black);
+    text-decoration: none;
+  }
+
+  @media (max-width: 480px) {
+    .footer-content {
+      flex-direction: column;
+    }
+
+    .footer-nav {
+      align-items: flex-start;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+  }
+</style>

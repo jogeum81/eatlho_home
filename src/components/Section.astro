@@ -1,0 +1,58 @@
+---
+export interface Props {
+  label?: string;
+  dividerTop?: boolean;
+  dividerBottom?: boolean;
+  paddingTop?: boolean;
+  paddingBottom?: boolean;
+  id?: string;
+}
+
+const {
+  label,
+  dividerTop = true,
+  dividerBottom = false,
+  paddingTop = true,
+  paddingBottom = true,
+  id,
+} = Astro.props;
+---
+
+<section
+  class:list={['section', { 'pt': paddingTop, 'pb': paddingBottom }]}
+  id={id}
+>
+  {dividerTop && <hr class="section-divider" />}
+  <div class="container">
+    {label && <p class="type-section-title section-label">{label}</p>}
+    <slot />
+  </div>
+  {dividerBottom && <hr class="section-divider section-divider--bottom" />}
+</section>
+
+<style>
+  .section {
+    width: 100%;
+  }
+
+  .section.pt {
+    padding-top: var(--padding-section);
+  }
+
+  .section.pb {
+    padding-bottom: var(--padding-section);
+  }
+
+  .section-divider {
+    margin-bottom: var(--padding-section);
+  }
+
+  .section-divider--bottom {
+    margin-top: var(--padding-section);
+    margin-bottom: 0;
+  }
+
+  .section-label {
+    margin-bottom: 32px;
+  }
+</style>

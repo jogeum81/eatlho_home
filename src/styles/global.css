@@ -1,0 +1,176 @@
+/* ============================================================
+   잇냉(eatlho) 글로벌 CSS
+   앱의 colors.ts / typography.ts 값을 CSS 변수로 이식
+   디자인 컨셉: Retro-Modern Monochrome + 에디토리얼 타이포그래피
+   ============================================================ */
+
+/* Google Fonts: Space Mono */
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
+/* ---- 컬러 변수 (colors.ts 기반) ---- */
+:root {
+  /* Grayscale - 메인 팔레트 */
+  --color-black: #1A1A1A;
+  --color-charcoal: #333333;
+  --color-gray: #666666;
+  --color-silver: #999999;
+  --color-light-gray: #E5E5E5;
+  --color-off-white: #F5F5F5;
+  --color-white: #FFFFFF;
+
+  /* AI 테마 */
+  --color-purple: #A855F7;
+  --color-purple-light: #F3E8FF;
+
+  /* 레시피 히어로 / 잡지 톤 */
+  --color-paper: #FAF6F0;
+  --color-paper-border: #E8DFD0;
+
+  /* AI 레인보우 그라데이션 (aiRainbow) */
+  --gradient-rainbow: linear-gradient(
+    90deg,
+    #FF6B6B,
+    #FFE66D,
+    #A855F7,
+    #3B82F6,
+    #FF6B6B
+  );
+
+  /* ---- 타이포그래피 변수 (typography.ts 기반) ---- */
+  /* 폰트 패밀리 */
+  --font-mono: 'Space Mono', 'Courier New', monospace;
+  --font-sans: 'Space Mono', 'Apple SD Gothic Neo', 'Noto Sans KR', system-ui, sans-serif;
+
+  /* 폰트 크기 (fontSize 토큰) */
+  --font-size-xs: 10px;
+  --font-size-sm: 12px;
+  --font-size-md: 13px;
+  --font-size-base: 15px;
+  --font-size-lg: 17px;
+  --font-size-xl: 19px;
+  --font-size-xxl: 22px;
+  --font-size-xxxl: 28px;
+
+  /* 폰트 웨이트 */
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  /* 라인 높이 */
+  --line-height-tight: 1.2;
+  --line-height-normal: 1.4;
+  --line-height-relaxed: 1.6;
+
+  /* 레터 스페이싱 */
+  --letter-spacing-wide: 2px;
+  --letter-spacing-headline: 4px;
+
+  /* 레이아웃 */
+  --max-width: 720px;
+  --padding-page: 24px;
+  --padding-section: 64px;
+}
+
+/* ---- 리셋 & 기본값 ---- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-sans);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-normal);
+  color: var(--color-black);
+  background-color: var(--color-off-white);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ---- 기본 요소 ---- */
+a {
+  color: var(--color-black);
+  text-decoration: underline;
+  text-decoration-color: var(--color-light-gray);
+  text-underline-offset: 3px;
+  transition: color 0.15s ease;
+}
+
+a:hover {
+  color: var(--color-purple);
+  text-decoration-color: var(--color-purple);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-mono);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
+  color: var(--color-black);
+}
+
+p {
+  line-height: var(--line-height-relaxed);
+  color: var(--color-charcoal);
+}
+
+hr {
+  border: none;
+  border-top: 1px solid var(--color-light-gray);
+  margin: 0;
+}
+
+/* ---- 레이아웃 유틸리티 ---- */
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--padding-page);
+}
+
+/* ---- 에디토리얼 타이포그래피 프리셋 ---- */
+
+/* 헤드라인 — 화면 대제목 (typography.headline) */
+.type-headline {
+  font-family: var(--font-mono);
+  font-size: clamp(var(--font-size-xxxl), 5vw, 52px);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
+  letter-spacing: var(--letter-spacing-headline);
+}
+
+/* 섹션 타이틀 (typography.sectionTitle) */
+.type-section-title {
+  font-family: var(--font-mono);
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-tight);
+  letter-spacing: var(--letter-spacing-wide);
+  text-transform: uppercase;
+  color: var(--color-silver);
+}
+
+/* 모노 숫자 라벨 (01/02/03) */
+.type-mono-number {
+  font-family: var(--font-mono);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  letter-spacing: var(--letter-spacing-wide);
+  color: var(--color-silver);
+}
+
+/* ---- 반응형 ---- */
+@media (max-width: 480px) {
+  :root {
+    --padding-page: 16px;
+    --padding-section: 40px;
+  }
+}

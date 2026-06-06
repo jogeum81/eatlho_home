@@ -1,0 +1,50 @@
+---
+export interface Props {
+  title: string;
+  description?: string;
+  ogTitle?: string;
+  ogDescription?: string;
+}
+
+const {
+  title,
+  description = '냉장고를, 말로 관리하세요. 장보기부터 냉장고 관리, AI 레시피 추천까지 — 한 줄 입력으로 끝.',
+  ogTitle,
+  ogDescription,
+} = Astro.props;
+
+const pageTitle = title === 'EATLHO' ? 'EATLHO — 잇냉' : `${title} — EATLHO`;
+const resolvedOgTitle = ogTitle ?? pageTitle;
+const resolvedOgDescription = ogDescription ?? description;
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+---
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalURL} />
+
+    <!-- OG 태그 -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:title" content={resolvedOgTitle} />
+    <meta property="og:description" content={resolvedOgDescription} />
+    <meta property="og:site_name" content="EATLHO" />
+    <meta property="og:locale" content="ko_KR" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content={resolvedOgTitle} />
+    <meta name="twitter:description" content={resolvedOgDescription} />
+
+    <title>{pageTitle}</title>
+
+    <!-- 글로벌 CSS -->
+    <link rel="stylesheet" href="/styles/global.css" />
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>

@@ -1,0 +1,266 @@
+---
+import Base from '../layouts/Base.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Base
+  title="이용약관"
+  description="잇냉(eatlho) 서비스 이용약관"
+>
+  <Header />
+
+  <main class="legal-page">
+    <div class="container">
+      <header class="legal-header">
+        <hr class="legal-header-rule" />
+        <p class="type-section-title">법적 문서</p>
+        <h1 class="legal-title">이용약관</h1>
+        <p class="legal-intro">잇냉(eatlho) 서비스 이용약관</p>
+      </header>
+
+      <article class="legal-body">
+
+        <section class="legal-section">
+          <h2 class="legal-h2">제1조 (목적)</h2>
+          <p>본 약관은 [운영자명](이하 "운영자")이 제공하는 모바일 애플리케이션 "잇냉"(eatlho, 이하 "서비스")의 이용과 관련하여 운영자와 이용자의 권리·의무 및 책임사항을 규정함을 목적으로 합니다.</p>
+        </section>
+
+        <hr class="legal-rule" />
+
+        <section class="legal-section">
+          <h2 class="legal-h2">제2조 (정의)</h2>
+          <ol class="legal-list">
+            <li>"서비스"란 냉장고 식재료 관리, AI 기반 레시피 추천, 장보기 목록 관리, 요리 기록 관리 등 운영자가 모바일 앱을 통해 제공하는 일체의 서비스를 말합니다.</li>
+            <li>"이용자"란 본 약관에 따라 서비스를 이용하는 회원을 말합니다.</li>
+            <li>"회원"이란 카카오 계정 등 소셜 로그인을 통해 서비스에 가입하여 서비스를 이용하는 자를 말합니다.</li>
+          </ol>
+        </section>
+
+        <hr class="legal-rule" />
+
+        <section class="legal-section">
+          <h2 class="legal-h2">제3조 (약관의 효력 및 변경)</h2>
+          <ol class="legal-list">
+            <li>본 약관은 서비스 화면에 게시함으로써 효력이 발생합니다.</li>
+            <li>운영자는 관련 법령을 위배하지 않는 범위에서 본 약관을 변경할 수 있으며, 변경 시 적용일자와 변경사유를 명시하여 서비스 내에 공지합니다.</li>
+            <li>이용자가 변경된 약관에 동의하지 않는 경우 회원 탈퇴를 통해 이용을 중단할 수 있습니다.</li>
+          </ol>
+        </section>
+
+        <hr class="legal-rule" />
+
+        <section class="legal-section">
+          <h2 class="legal-h2">제4조 (회원가입 및 계정)</h2>
+          <ol class="legal-list">
+            <li>회원가입은 이용자가 카카오 등 소셜 로그인으로 인증하고, 운영자가 이를 승낙함으로써 완료됩니다.</li>
+            <li>이용자는 본인의 소셜 계정을 통해 서비스에 로그인하며, 계정 관리 책임은 이용자에게 있습니다.</li>
+            <li>만 14세 미만 아동은 서비스를 이용할 수 없습니다.</li>
+          </ol>
+        </section>
+
+        <hr class="legal-rule" />
+
+        <section class="legal-section">
+          <h2 class="legal-h2">제5조 (서비스의 내용)</h2>
+          <p>운영자는 다음과 같은 서비스를 제공합니다.</p>
+          <ol class="legal-list">
+            <li>냉장고 식재료 등록·관리 및 유통기한 알림</li>
+            <li>AI(생성형 인공지능)를 활용한 자연어 입력 분석 — 장보기·재료 등록·레시피 검색 통합 입력</li>
+            <li>영수증 사진 인식(OCR)을 통한 식재료 자동 등록</li>
+            <li>보유 식재료 기반 레시피 추천 및 요리 기록 관리</li>
+            <li>장보기 목록 작성·관리</li>
+          </ol>
+        </section>
+
+        <hr class="legal-rule" />
+
+        <section class="legal-section">
+          <h2 class="legal-h2">제6조 (AI 기능 및 그 한계)</h2>
+          <ol class="legal-list">
+            <li>서비스는 입력된 텍스트·이미지를 인공지능 모델로 분석하여 식재료 정보, 레시피 등을 제공합니다.</li>
+            <li>AI가 제공하는 분석 결과·레시피·유통기한·조리 정보는 참고용이며, 정확성·완전성·안전성을 보장하지 않습니다.</li>
+            <li>이용자는 식품의 실제 상태, 알레르기 유발 성분, 조리 안전 등을 스스로 최종 확인해야 하며, AI 결과에 전적으로 의존하여 발생한 결과에 대해 운영자는 책임을 지지 않습니다.</li>
+            <li>AI 기능은 운영 비용 관리를 위해 일정 사용량 한도가 적용될 수 있습니다.</li>
+          </ol>
+        </section>
+
+        <hr class="legal-rule" />
+
+        <section class="legal-section">
+          <h2 class="legal-h2">제7조 (이용자의 의무)</h2>
+          <ol class="legal-list">
+            <li>이용자는 본 약관 및 관련 법령을 준수해야 합니다.</li>
+            <li>이용자는 타인의 정보를 도용하거나 허위 정보를 등록해서는 안 됩니다.</li>
+            <li>이용자는 서비스의 정상적인 운영을 방해하는 행위(과도한 자동화 요청, 역설계, 무단 접근 시도 등)를 해서는 안 됩니다.</li>
+          </ol>
+        </section>
+
+        <hr class="legal-rule" />
+
+        <section class="legal-section">
+          <h2 class="legal-h2">제8조 (서비스 이용의 제한 및 중지)</h2>
+          <ol class="legal-list">
+            <li>운영자는 이용자가 본 약관을 위반하거나 서비스의 정상적인 운영을 방해한 경우 사전 통지 후(긴급한 경우 사후) 서비스 이용을 제한할 수 있습니다.</li>
+            <li>운영자는 시스템 점검, 설비 보수, 외부 AI 제공자의 사정 등으로 서비스의 전부 또는 일부를 일시 중지할 수 있습니다.</li>
+          </ol>
+        </section>
+
+        <hr class="legal-rule" />
+
+        <section class="legal-section">
+          <h2 class="legal-h2">제9조 (게시물 및 콘텐츠)</h2>
+          <ol class="legal-list">
+            <li>이용자가 등록한 식재료·레시피·요리 기록 등의 콘텐츠에 대한 권리는 이용자에게 있습니다.</li>
+            <li>이용자가 레시피를 "공개"로 설정한 경우, 해당 콘텐츠는 다른 이용자에게 노출될 수 있습니다. "비공개" 레시피는 본인만 열람할 수 있습니다.</li>
+          </ol>
+        </section>
+
+        <hr class="legal-rule" />
+
+        <section class="legal-section">
+          <h2 class="legal-h2">제10조 (계약 해지 및 회원 탈퇴)</h2>
+          <ol class="legal-list">
+            <li>이용자는 언제든지 서비스 내 회원 탈퇴 기능을 통해 이용계약을 해지할 수 있습니다.</li>
+            <li>탈퇴 시 이용자의 개인정보 및 데이터는 개인정보 처리방침에 따라 처리됩니다. 다만 공개로 설정한 레시피 등 일부 콘텐츠는 익명화하여 보존될 수 있습니다(이용자가 완전 삭제를 선택한 경우 제외).</li>
+          </ol>
+        </section>
+
+        <hr class="legal-rule" />
+
+        <section class="legal-section">
+          <h2 class="legal-h2">제11조 (면책조항)</h2>
+          <ol class="legal-list">
+            <li>운영자는 천재지변, 통신사업자의 서비스 중지, 외부 AI 제공자의 장애 등 불가항력으로 서비스를 제공할 수 없는 경우 책임을 면합니다.</li>
+            <li>운영자는 이용자의 귀책사유로 인한 서비스 이용 장애에 대해 책임을 지지 않습니다.</li>
+            <li>본 서비스는 무료로 제공되며, 서비스의 정보 및 AI 결과 이용에 따른 판단과 책임은 이용자에게 있습니다.</li>
+          </ol>
+        </section>
+
+        <hr class="legal-rule" />
+
+        <section class="legal-section">
+          <h2 class="legal-h2">제12조 (분쟁 해결 및 준거법)</h2>
+          <ol class="legal-list">
+            <li>본 약관은 대한민국 법령에 따라 해석됩니다.</li>
+            <li>서비스 이용과 관련한 분쟁에 대해 운영자와 이용자는 성실히 협의하여 해결하며, 협의가 이루어지지 않을 경우 관련 법령상의 관할 법원에 제소할 수 있습니다.</li>
+          </ol>
+        </section>
+
+        <hr class="legal-rule" />
+
+        <section class="legal-section">
+          <h2 class="legal-h2">부칙</h2>
+          <p>본 약관은 <strong>[시행일자]</strong>부터 시행합니다.</p>
+        </section>
+
+      </article>
+    </div>
+  </main>
+
+  <Footer />
+</Base>
+
+<style>
+  .legal-page {
+    padding-top: 56px;
+    padding-bottom: 0;
+  }
+
+  .legal-header {
+    padding-bottom: 40px;
+  }
+
+  .legal-header-rule {
+    margin-bottom: 32px;
+  }
+
+  .type-section-title {
+    font-family: var(--font-mono);
+    font-size: var(--font-size-md);
+    font-weight: var(--font-weight-semibold);
+    letter-spacing: var(--letter-spacing-wide);
+    text-transform: uppercase;
+    color: var(--color-silver);
+    margin-bottom: 16px;
+  }
+
+  .legal-title {
+    font-family: var(--font-mono);
+    font-size: clamp(var(--font-size-xxl), 4vw, 40px);
+    font-weight: var(--font-weight-bold);
+    letter-spacing: 3px;
+    color: var(--color-black);
+    margin-bottom: 12px;
+  }
+
+  .legal-intro {
+    font-size: var(--font-size-base);
+    color: var(--color-gray);
+    line-height: var(--line-height-relaxed);
+  }
+
+  .legal-body {
+    max-width: 640px;
+    padding-bottom: 80px;
+  }
+
+  .legal-section {
+    padding: 32px 0;
+  }
+
+  .legal-rule {
+    margin: 0;
+  }
+
+  .legal-h2 {
+    font-family: var(--font-mono);
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-bold);
+    letter-spacing: 0.5px;
+    color: var(--color-black);
+    margin-bottom: 16px;
+  }
+
+  .legal-body p {
+    font-size: var(--font-size-base);
+    color: var(--color-charcoal);
+    line-height: var(--line-height-relaxed);
+    margin-bottom: 8px;
+  }
+
+  .legal-body p:last-child {
+    margin-bottom: 0;
+  }
+
+  .legal-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    counter-reset: legal-counter;
+  }
+
+  .legal-list li {
+    display: grid;
+    grid-template-columns: 24px 1fr;
+    gap: 8px;
+    font-size: var(--font-size-base);
+    color: var(--color-charcoal);
+    line-height: var(--line-height-relaxed);
+    counter-increment: legal-counter;
+  }
+
+  .legal-list li::before {
+    content: counter(legal-counter) ".";
+    font-family: var(--font-mono);
+    font-size: var(--font-size-sm);
+    color: var(--color-silver);
+    padding-top: 3px;
+  }
+
+  strong {
+    font-weight: var(--font-weight-bold);
+    color: var(--color-black);
+  }
+</style>
