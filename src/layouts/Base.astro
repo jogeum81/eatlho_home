@@ -1,4 +1,6 @@
 ---
+import '../styles/global.css';
+
 export interface Props {
   title: string;
   description?: string;
@@ -8,7 +10,7 @@ export interface Props {
 
 const {
   title,
-  description = '냉장고를, 말로 관리하세요. 장보기부터 냉장고 관리, AI 레시피 추천까지 — 한 줄 입력으로 끝.',
+  description = '냉장고를, 한 줄로 관리하세요. 장보기부터 냉장고 관리, AI 레시피 추천까지 — 한 줄 입력으로 끝.',
   ogTitle,
   ogDescription,
 } = Astro.props;
@@ -40,9 +42,6 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     <meta name="twitter:description" content={resolvedOgDescription} />
 
     <title>{pageTitle}</title>
-
-    <!-- 글로벌 CSS -->
-    <link rel="stylesheet" href="/styles/global.css" />
   </head>
   <body>
     <slot />
