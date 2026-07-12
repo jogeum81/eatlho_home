@@ -216,9 +216,8 @@ import Footer from '../components/Footer.astro';
   }
 
   .legal-list li {
-    display: grid;
-    grid-template-columns: 24px 1fr;
-    gap: 8px;
+    position: relative;
+    padding-left: 24px;
     font-size: var(--font-size-base);
     color: var(--color-charcoal);
     line-height: var(--line-height-relaxed);
@@ -227,10 +226,11 @@ import Footer from '../components/Footer.astro';
 
   .legal-list li::before {
     content: counter(legal-counter) ".";
+    position: absolute;
+    left: 0;
     font-family: var(--font-mono);
     font-size: var(--font-size-sm);
     color: var(--color-silver);
-    padding-top: 3px;
   }
 
   .legal-effective {
