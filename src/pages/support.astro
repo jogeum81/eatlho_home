@@ -71,7 +71,7 @@ import Footer from '../components/Footer.astro';
 
         <section class="legal-section">
           <h2 class="legal-h2">관련 문서</h2>
-          <ul class="legal-list">
+          <ul class="legal-ul">
             <li><a href="/privacy/">개인정보 처리방침</a></li>
             <li><a href="/terms/">이용약관</a></li>
             <li><a href="/account-deletion/">계정 및 데이터 삭제</a></li>
@@ -84,3 +84,157 @@ import Footer from '../components/Footer.astro';
 
   <Footer />
 </Base>
+
+<style>
+  .legal-page {
+    padding-top: 56px;
+    padding-bottom: 0;
+  }
+
+  .legal-header {
+    padding-bottom: 40px;
+  }
+
+  .legal-header-rule {
+    margin-bottom: 32px;
+  }
+
+  .type-section-title {
+    font-family: var(--font-mono);
+    font-size: var(--font-size-md);
+    font-weight: var(--font-weight-semibold);
+    letter-spacing: var(--letter-spacing-wide);
+    text-transform: uppercase;
+    color: var(--color-silver);
+    margin-bottom: 16px;
+  }
+
+  .legal-title {
+    font-family: var(--font-mono);
+    font-size: clamp(var(--font-size-xxl), 4vw, 40px);
+    font-weight: var(--font-weight-bold);
+    letter-spacing: 3px;
+    color: var(--color-black);
+    margin-bottom: 12px;
+  }
+
+  .legal-intro {
+    font-size: var(--font-size-base);
+    color: var(--color-gray);
+    line-height: var(--line-height-relaxed);
+    max-width: 600px;
+  }
+
+  .legal-body {
+    max-width: 640px;
+    padding-bottom: 80px;
+  }
+
+  .legal-section {
+    padding: 32px 0;
+  }
+
+  .legal-rule {
+    margin: 0;
+  }
+
+  .legal-h2 {
+    font-family: var(--font-mono);
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-bold);
+    letter-spacing: 0.5px;
+    color: var(--color-black);
+    margin-bottom: 16px;
+  }
+
+  .legal-h3 {
+    font-family: var(--font-mono);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-charcoal);
+    letter-spacing: 0.5px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+
+  .legal-body p {
+    font-size: var(--font-size-base);
+    color: var(--color-charcoal);
+    line-height: var(--line-height-relaxed);
+    margin-bottom: 8px;
+  }
+
+  .legal-body p:last-child {
+    margin-bottom: 0;
+  }
+
+  .legal-body a {
+    color: var(--color-black);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+
+  .legal-ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 8px;
+  }
+
+  .legal-ul li {
+    display: flex;
+    gap: 8px;
+    align-items: baseline;
+    font-size: var(--font-size-base);
+    color: var(--color-charcoal);
+    line-height: var(--line-height-relaxed);
+  }
+
+  .legal-ul li::before {
+    content: "—";
+    font-family: var(--font-mono);
+    font-size: var(--font-size-sm);
+    color: var(--color-silver);
+    flex-shrink: 0;
+    padding-top: 2px;
+  }
+
+  .legal-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    counter-reset: legal-counter;
+    margin-bottom: 8px;
+  }
+
+  .legal-list li {
+    position: relative;
+    padding-left: 24px;
+    font-size: var(--font-size-base);
+    color: var(--color-charcoal);
+    line-height: var(--line-height-relaxed);
+    counter-increment: legal-counter;
+  }
+
+  .legal-list li::before {
+    content: counter(legal-counter) ".";
+    position: absolute;
+    left: 0;
+    font-family: var(--font-mono);
+    font-size: var(--font-size-sm);
+    color: var(--color-silver);
+  }
+
+  .legal-effective {
+    font-family: var(--font-mono);
+    font-size: var(--font-size-sm);
+    color: var(--color-gray);
+  }
+
+  strong {
+    font-weight: var(--font-weight-bold);
+    color: var(--color-black);
+  }
+</style>
