@@ -1,0 +1,86 @@
+---
+import Base from '../layouts/Base.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Base
+  title="지원"
+  description="잇냉(eatlho) 고객 지원 — 문의, 자주 묻는 질문, 계정 관리"
+>
+  <Header />
+
+  <main class="legal-page">
+    <div class="container">
+      <header class="legal-header">
+        <hr class="legal-header-rule" />
+        <p class="type-section-title">고객 지원</p>
+        <h1 class="legal-title">지원</h1>
+        <p class="legal-intro">
+          잇냉을 쓰다 막히는 곳이 있으면 알려주세요. 아래 이메일로 연락하시면
+          영업일 기준 3일 안에 답변드립니다.
+        </p>
+      </header>
+
+      <article class="legal-body">
+
+        <section class="legal-section">
+          <h2 class="legal-h2">문의</h2>
+          <p>
+            <strong><a href="mailto:eatlho@naver.com">eatlho@naver.com</a></strong>
+          </p>
+          <p>
+            오류가 났다면 어떤 화면에서 무엇을 하다 생겼는지, 쓰고 계신 기기와
+            앱 버전을 함께 적어주시면 원인을 찾기가 훨씬 빠릅니다.
+            앱 버전은 <strong>설정 &gt; 앱 정보</strong>에서 확인할 수 있습니다.
+          </p>
+        </section>
+
+        <section class="legal-section">
+          <h2 class="legal-h2">자주 묻는 질문</h2>
+
+          <h3 class="legal-h3">로그인 없이 써볼 수 있나요</h3>
+          <p>
+            네. 로그인 화면에서 <strong>로그인 없이 둘러보기</strong>를 누르면
+            바로 시작할 수 있습니다. 나중에 카카오나 Apple 계정을 연결하면
+            그동안 넣어 둔 재료와 기록이 그대로 이어집니다.
+          </p>
+
+          <h3 class="legal-h3">재료를 어떻게 넣나요</h3>
+          <p>
+            화면 아래 입력창에 말하듯 적으면 됩니다.
+            "양파 한 망 샀어", "계란 10개 냉장고에 넣어줘"처럼 쓰면
+            수량과 보관 위치를 알아서 정리합니다. 결과가 다르면
+            <strong>수정</strong>으로 고친 뒤 추가할 수 있습니다.
+          </p>
+
+          <h3 class="legal-h3">추천 레시피가 마음에 들지 않아요</h3>
+          <p>
+            원하는 요리명을 직접 적어보세요. "김치찌개 레시피"처럼 적으면
+            그 요리를 기준으로 찾아드립니다. 냉장고에 없는 재료는
+            <strong>장보기에 담기</strong>로 한 번에 옮길 수 있습니다.
+          </p>
+
+          <h3 class="legal-h3">계정을 지우고 싶어요</h3>
+          <p>
+            앱 <strong>설정 &gt; 프로필 편집 &gt; 회원 탈퇴</strong>에서 즉시 삭제할 수 있습니다.
+            앱에 접근할 수 없다면 <a href="/account-deletion/">계정 및 데이터 삭제</a> 안내를
+            참고해 이메일로 요청하실 수 있습니다.
+          </p>
+        </section>
+
+        <section class="legal-section">
+          <h2 class="legal-h2">관련 문서</h2>
+          <ul class="legal-list">
+            <li><a href="/privacy/">개인정보 처리방침</a></li>
+            <li><a href="/terms/">이용약관</a></li>
+            <li><a href="/account-deletion/">계정 및 데이터 삭제</a></li>
+          </ul>
+        </section>
+
+      </article>
+    </div>
+  </main>
+
+  <Footer />
+</Base>
